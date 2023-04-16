@@ -1,24 +1,22 @@
-def word_distance(word1, word2):
-    """
-    calculate the distance between two words
-    """
-    if len(word1) != len(word2):
-        return -1
-    
-    distance = 0
-    for i in range(len(word1)):
-        if word1[i] != word2[i]:
-            distance += 1
+from word_sort import word_distance
+from merge_sort import merge_sort
 
-    return distance
-#%%
-words = ["casa", "cisa", "cosa", "cato", "cima", "pala", "palo", "papa", "pata", "pato", "pima", "pita", "pito", "pota", "poto", "tapa", "tata", "tima", "tita", "tito", "tota", "toto"]
+f_in = open("mini_dic.txt" , "r")
 
-# Sort the list
-words.sort()
 
-# Print the sorted list
-print(words)
+lista_palavras = f_in.readlines()
+lista_palavras =[palavra.replace('\n', '') for palavra in lista_palavras]
+print(lista_palavras)
+
+
+dicionario_ordenado = merge_sort(lista_palavras)
+print(dicionario_ordenado)
+
+
+n= len(dicionario_ordenado)
+
+
+
 
 #%%
 from bfs import bfs
