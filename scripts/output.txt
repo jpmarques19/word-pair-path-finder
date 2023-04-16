@@ -1,0 +1,21 @@
+armas -1
+armas
+
+engenheiro -1
+engenheiro
+
+zebra -1
+citar
+
+caso -1
+casa
+
+casa 4
+cala
+calo
+cato
+cito
+
+os 1
+as
+
