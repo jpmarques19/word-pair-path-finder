@@ -5,3 +5,7 @@ words.sort()
 
 # Print the sorted list
 print(words)
+
+
+def word_distance():
+    pass
