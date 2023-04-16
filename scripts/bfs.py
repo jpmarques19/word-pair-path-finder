@@ -4,6 +4,9 @@ def adicionaAresta(grafo,u,v):
 
 # Procura em largura (devolve o menor n'umero de arestas entre v_origem e v_destino ou -1, caso não exista um caminho entre v_origem e v_destino)
 def bfs(n, grafo, v_origem, v_destino):
+    
+    if (v_origem == v_destino): return 0
+    #if (v_origem >= n or v_destino >= n): return -1
     # cria lista dos vértives visitados (inicializada a False)
     visitado = [False] * n
     # cria uma lista que guarda, para cada vértice v, o menor número de arestas entre v_origem e v (inicializada a infinito).

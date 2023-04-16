@@ -8,3 +8,4 @@ def create_adjacency_list(words):
         for j in range(i+1, len(words)):
             if word_distance(words[i], words[j]) == 1:
                 adicionaAresta(grafo, i, j)
+    return grafo
