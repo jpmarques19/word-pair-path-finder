@@ -37,3 +37,5 @@ adicionaAresta(grafo, 2, 4) # adiciona as arestas entre os vértices  2 e 4
 
 # Executa a bfs entre os vértices 0 e 4 e devolve o menor n'umero de arestas entre os vértices 0 e 4
 print(bfs(n, grafo, 0, 4))
+
+print(grafo)
