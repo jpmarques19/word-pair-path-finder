@@ -2,13 +2,18 @@ from merge_sort import merge_sort
 from binary_search import binary_search
 from bfs import bfs
 from create_adjacency_list import create_adjacency_list
+import time
 
-f_in = open("dicionario.txt", "r")
+start_time = time.time()
+
+
+f_in = open("dicionario1.txt", "r")
 
 lista_palavras = f_in.readlines()
 lista_palavras = [palavra.replace('\n', '') for palavra in lista_palavras]
 
 dicionario_ordenado = merge_sort(lista_palavras)
+
 adj_list = create_adjacency_list(dicionario_ordenado)
 
 print(binary_search(dicionario_ordenado, 0, len(dicionario_ordenado) - 1, "engeheiro"))
@@ -40,3 +45,6 @@ for line in lines:
 
 output_file.close()
 
+end_time = time.time()
+total_time = end_time - start_time
+print(f"Total time: {total_time:.2f} seconds")

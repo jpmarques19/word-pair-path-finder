@@ -1,21 +1,47 @@
-armas -1
-armas
+amoricos -1
+cortinas
 
-engenheiro -1
-engenheiro
+mobilize -1
+botastes
 
-zebra -1
-citar
+nevardes 18
+negardes
+regardes
+regerdes
+reverdes
+revertes
+revertas
+reversas
+reversos
+revermos
+revirmos
+remirmos
+remiamos
+gemiamos
+geriamos
+veriamos
+vereamos
+vereados
+vereador
 
-caso -1
-casa
+varrerei -1
+alvoreco
 
-casa 4
-cala
-calo
-cato
-cito
+escudado -1
+pirralha
 
-os 1
-as
+peneirou -1
+amoedara
+
+engrenou -1
+trinavam
+
+esquecas -1
+alfaiado
+
+malharao -1
+calcotas
+
+acamares -1
+garimpei
 
