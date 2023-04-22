@@ -1,6 +1,4 @@
-from bfs import adicionaAresta
 from word_sort import word_distance
-
 from collections import defaultdict
 
 class TrieNode:
@@ -41,7 +39,9 @@ class Trie:
 
         return candidates
 
-
+def adicionaAresta(grafo,u,v):
+    grafo[u].append(v)
+    grafo[v].append(u)
 
 def create_adjacency_list(words):
     grafo = [[] for _ in range(len(words))]
