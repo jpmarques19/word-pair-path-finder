@@ -20,8 +20,6 @@ def main():
 
     adjacency_list = create_adjacency_list(sorted_word_list)
 
-    print(binary_search(sorted_word_list, 0, len(sorted_word_list) - 1, "engeheiro"))
-
     input_lines = read_words_from_file("../data/input_08.txt")
 
     with open("../data/output.txt", "w") as output_file:
@@ -47,7 +45,7 @@ def main():
 
     end_time = time.time()
     total_time = end_time - start_time
-    print(f"Total time: {total_time:.2f} seconds")
+    print(f"Total running time: {total_time:.2f} seconds")
 
 
 if __name__ == "__main__":
