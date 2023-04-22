@@ -1,6 +1,6 @@
 from merge_sort import merge_sort
 from binary_search import binary_search
-from bfs import bfs
+from bfs import bfs, bi_bfs
 from create_adjacency_list import create_adjacency_list
 import time
 
@@ -11,7 +11,7 @@ def read_words_from_file(filename):
     return [word.replace('\n', '') for word in words]
 
 
-def main():
+def main(bfs_option="bfs"):
     start_time = time.time()
 
     word_list = read_words_from_file("../data/dicionario1.txt")
@@ -32,7 +32,10 @@ def main():
                 output_file.write(f"{word1} -1\n{word2}\n\n")
                 continue
 
-            path = bfs(len(sorted_word_list), adjacency_list, word1_idx, word2_idx)
+            if bfs_option == "bi_bfs":
+                path = bi_bfs(len(sorted_word_list), adjacency_list, word1_idx, word2_idx)
+            else:
+                path = bfs(len(sorted_word_list), adjacency_list, word1_idx, word2_idx)
 
             if path is None:
                 output_file.write(f"{word1} -1\n{word2}\n\n")
