@@ -1,4 +1,3 @@
-from word_sort import word_distance
 from collections import defaultdict
 
 class TrieNode:
@@ -42,6 +41,16 @@ class Trie:
 def adicionaAresta(grafo,u,v):
     grafo[u].append(v)
     grafo[v].append(u)
+    
+def word_distance(word1, word2):
+    """
+    Calculate the distance between two words.
+    """
+    if len(word1) != len(word2):
+        return -1
+
+    return sum(char1 != char2 for char1, char2 in zip(word1, word2))
+
 
 def create_adjacency_list(words):
     grafo = [[] for _ in range(len(words))]
