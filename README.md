@@ -50,3 +50,46 @@ wordkb
 2. Install the required Python libraries if necessary
 3. Run the script, providing the input files as arguments
 4. View the generated output file
+
+## Algorithm Reports
+
+### Report 1: Non-Optimized Algorithm
+
+1. Introduction
+    - Problem description
+    - Purpose of the adjacency list algorithm
+
+2. Non-Optimized Algorithm
+    - Description of the non-optimized algorithm
+    - Time and space complexity analysis
+
+3. Results
+    - Test datasets used
+    - Runtime for each test dataset
+    - Memory usage for each test dataset
+
+4. Conclusion
+    - Summary of the non-optimized algorithm's performance
+    - Potential areas for improvement
+
+### Report 2: Optimized Algorithm
+
+1. Introduction
+    - Problem description
+    - Purpose of the adjacency list algorithm
+    - Brief mention of the non-optimized algorithm and the need for optimization
+
+2. Optimized Algorithm
+    - Description of the optimized algorithm
+    - Explanation of the improvements made compared to the non-optimized algorithm
+    - Time and space complexity analysis
+
+3. Results
+    - Test datasets used
+    - Runtime for each test dataset (comparison with non-optimized algorithm)
+    - Memory usage for each test dataset (comparison with non-optimized algorithm)
+
+4. Conclusion
+    - Summary of the optimized algorithm's performance
+    - Comparison with the non-optimized algorithm
+    - Recommendations based on the results (e.g., when to use each algorithm)
