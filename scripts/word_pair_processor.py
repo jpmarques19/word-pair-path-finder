@@ -26,4 +26,4 @@ class WordPairProcessor:
         else:
             path_length = len(path_a_b) - 1
             path_string = "\n".join(words_list[i] for i in path_a_b[1:])
-            return f"{word_a} {path_length}\n{path_string}\n{word_b}\n\n"
+            return f"{word_a} {path_length}\n{path_string}\n\n"
