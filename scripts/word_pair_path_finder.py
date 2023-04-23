@@ -6,7 +6,7 @@ from word_pair_processor import WordPairProcessor
 
 def main():
     input_pairs = read_input_file("../data/input_08.txt")
-    unique_words = read_dictionary_file("../data/dicionario1.txt")
+    unique_words = read_dictionary_file("../data/dicionario.txt")
     word_graph = WordGraph(input_pairs, unique_words)
     word_pair_processor = WordPairProcessor(word_graph)
 
