@@ -5,8 +5,8 @@ Created on Thu Apr  6 10:51:49 2023
 @author: maria
 """
 
-ficheiro_input="input_08.txt"
-ficheiro_dicionario=  "dicionario.txt" # "mini_dic.txt"
+ficheiro_input="input_01.txt"
+ficheiro_dicionario=  "mini_dic.txt" # "mini_dic.txt"
 
 import time
 tempo_inicial=time.time()
@@ -115,7 +115,7 @@ for comprimento in my_dict: #um grafo para cada conjunto de palavras com o mesmo
                 adicionaAresta(grafo, j, k)  #entao ha uma aresta entre as palavras
     #print("key:", comprimento, "dict:", my_dict[comprimento])
     #print("Grafo:", grafo)
-    grafos.append(grafo) 
+    grafos.append(grafo)
     
 my_grafos = dict(zip(keys,grafos))
 
@@ -124,57 +124,57 @@ tempo_ate_graf=time.time()
 print("Tempo de execução de formaçao grafos = ",tempo_ate_graf - tempo_ate_dic, "segundos", (tempo_ate_graf - tempo_ate_dic)/60, "minutos")
 print("Tempo de execução ate fim formaçao grafos = ",tempo_ate_graf - tempo_inicial, "segundos", (tempo_ate_graf - tempo_inicial)/60, "minutos")
 
-# for i in pals_ab: #para cada par i 
-#     pala=i[0]
-#     palb=i[1]
-#     if(binary_search(my_dict[len(pala)], 0, len(my_dict[len(pala)])-1, pala)==-1 or 
-#         binary_search(my_dict[len(pala)], 0, len(my_dict[len(pala)])-1, pala)==-1):
-#         print(pala, "-1")
-#         print(palb, "\n")
+for i in pals_ab: #para cada par i 
+    pala=i[0]
+    palb=i[1]
+    if(binary_search(my_dict[len(pala)], 0, len(my_dict[len(pala)])-1, pala)==-1 or 
+       binary_search(my_dict[len(pala)], 0, len(my_dict[len(pala)])-1, pala)==-1):
+        print(pala, "-1")
+        print(palb, "\n")
         
-#     elif(pala==palb):
-#         print(i[0], "0")
-#         print(i[1], "\n")
+    elif(pala==palb):
+        print(i[0], "0")
+        print(i[1], "\n")
     
-#     else:
-#         dici = my_dict[len(pala)]    
-#         v1 =  dici.index(pala)
-#         v2 = dici.index(palb)
-#         n=len(dici)
-#         grafo= my_grafos[len(pala)]
-#         result= bfs(n, grafo, v1,v2)
-#         if(result==-1):
-#             print(pala, result)
-#             print(palb, "\n")
-#         else:
-#             dici = my_dict[len(pala)]    
-#             v1 =  dici.index(pala)
-#             v2 = dici.index(palb)
-#             n=len(dici)
-#             grafo= my_grafos[len(pala)]
-#             r1= bfs(n, grafo, v1,v2)
-#             p=r1
-#             if(p==-1):
-#                 print(pala, p)
-#                 print(palb, "\n")
-#             else: #incompleto, nao vai ser o mesmo no futuro
-#                 r2= bfs(n, grafo, v2,v1)
+    else:
+        dici = my_dict[len(pala)]    
+        v1 =  dici.index(pala)
+        v2 = dici.index(palb)
+        n=len(dici)
+        grafo= my_grafos[len(pala)]
+        result= bfs(n, grafo, v1,v2)
+        if(result==-1):
+            print(pala, result)
+            print(palb, "\n")
+        else:
+            dici = my_dict[len(pala)]    
+            v1 =  dici.index(pala)
+            v2 = dici.index(palb)
+            n=len(dici)
+            grafo= my_grafos[len(pala)]
+            r1= bfs(n, grafo, v1,v2)
+            p=r1
+            if(p==-1):
+                print(pala, p)
+                print(palb, "\n")
+            else: #incompleto, nao vai ser o mesmo no futuro
+                r2= bfs(n, grafo, v2,v1)
                 
-#                 maxv=0
-#                 for i in range(len(r1)):
-#                     if(r1[i]!= float('inf') and maxv < r1[i]):
-#                         maxv=r1[i]
+                maxv=0
+                for i in range(len(r1)):
+                    if(r1[i]!= float('inf') and maxv < r1[i]):
+                        maxv=r1[i]
     
-#                 for i in range(len(r1)):
-#                     if(r1[i]!=maxv-r2[i]):
-#                         r1[i]=-1
+                for i in range(len(r1)):
+                    if(r1[i]!=maxv-r2[i]):
+                        r1[i]=-1
                 
-#                 print(pala, maxv)
-#                 for i in range(1,maxv):
-#                     elem=r1.index(i)
-#                     print(dici[elem])
-#                 print(palb, "\n")
+                print(pala, maxv)
+                for i in range(1,maxv):
+                    elem=r1.index(i)
+                    print(dici[elem])
+                print(palb, "\n")
 
-# tempo_final=time.time()
+tempo_final=time.time()
 
-# print("Tempo de execução = ",tempo_final - tempo_inicial, "segundos = ", (tempo_final - tempo_inicial)/60, "minutos" )
+print("Tempo de execução = ",tempo_final - tempo_inicial, "segundos = ", (tempo_final - tempo_inicial)/60, "minutos" )
